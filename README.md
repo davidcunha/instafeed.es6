@@ -1,0 +1,1 @@
+# instafeed.es6
