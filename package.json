@@ -1,0 +1,71 @@
+{
+  "name": "instafeed.es6",
+  "version": "1.0.0",
+  "description": "Instafeed.js ES6",
+  "license": "MIT",
+  "author": {
+    "name": "David Cunha",
+    "email": "davidgoncalvescunha@gmail.com",
+    "url": "https://davidcunha.xyz"
+  },
+  "bugs": "https://github.com/davidcunha/instafeed.es6/issues",
+  "repository": "https://github.com/davidcunha/instafeed.es6",
+  "keywords": [
+    "instafeed",
+    "es6"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "BABEL_ENV=production babel src --out-dir dist",
+    "build:lib": "babel src --out-dir lib",
+    "build:standard": "prettier-standard \"./src/*.js\" && babel src --out-dir lib",
+    "lint": "eslint -c .eslintrc ./src",
+    "lint:fix": "eslint --fix -c .eslintrc ./src",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "prepare": "npm run build"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "lint-staged": {
+    "linters": {
+      "src/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "deprecatedDependencies": {
+    "instafeed.js": "1.4.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.1.2",
+    "@commitlint/config-conventional": "^7.1.2",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.0",
+    "babel-minify": "0.2.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-minify": "0.2.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "6.26.0",
+    "eslint": "4.8.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-standard": "3.0.1",
+    "husky": "0.14.3",
+    "lint-staged": "4.2.3",
+    "prettier-standard": "7.0.1"
+  }
+}
