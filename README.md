@@ -2,7 +2,7 @@
 
 Instafeed is a dead-simple way to add Instagram photos to your website. No jQuery required, just good 'ol plain javascript.
 
-This is a continuation and a remake of [Steven Schobert's original instafeed.js](https://github.com/stevenschobert/instafeed.js) in order to provide ES6 support.
+This is a continuation and a remake of [Steven Schobert's original instafeed.js](https://github.com/stevenschobert/instafeed.js) in ES6 with Babel.
 
 ## :warning: IMPORTANT! Instagram is changing the API that Instafeed depends on.
 
