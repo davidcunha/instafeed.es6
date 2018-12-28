@@ -14,11 +14,9 @@
     "instafeed",
     "es6"
   ],
-  "main": "./dist/index.js",
+  "main": "./lib/instafeed.js",
   "scripts": {
-    "build": "BABEL_ENV=production babel src --out-dir dist",
-    "build:lib": "babel src --out-dir lib",
-    "build:standard": "prettier-standard \"./src/*.js\" && babel src --out-dir lib",
+    "build": "BABEL_ENV=production babel src --out-dir lib",
     "lint": "eslint -c .eslintrc ./src",
     "lint:fix": "eslint --fix -c .eslintrc ./src",
     "precommit": "lint-staged",
